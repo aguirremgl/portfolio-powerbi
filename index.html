@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Miguel Aguirre | Data Analyst</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -24,23 +26,27 @@
             line-height: 1.6;
         }
 
-        /* NAVEGACIÓN */
+
+        /* =========================
+           NAVEGACIÓN
+        ========================== */
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 10%;
+            padding: 22px 10%;
             background-color: #0b1120;
             border-bottom: 1px solid #1f2937;
             position: sticky;
             top: 0;
+            z-index: 100;
         }
 
         .logo {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
-            color: #ffffff;
+            color: white;
         }
 
         nav a {
@@ -53,7 +59,10 @@
             color: #38bdf8;
         }
 
-        /* PORTADA */
+
+        /* =========================
+           PORTADA
+        ========================== */
 
         .hero {
             min-height: 80vh;
@@ -91,9 +100,10 @@
         .hero p {
             font-size: 19px;
             color: #cbd5e1;
-            max-width: 650px;
+            max-width: 680px;
             margin-bottom: 35px;
         }
+
 
         .button {
             display: inline-block;
@@ -106,6 +116,11 @@
             margin-right: 15px;
         }
 
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+
         .button-secondary {
             display: inline-block;
             border: 1px solid #334155;
@@ -115,14 +130,17 @@
             border-radius: 8px;
         }
 
-        /* SECCIONES */
+
+        /* =========================
+           SECCIONES
+        ========================== */
 
         section {
             padding: 90px 10%;
         }
 
         .section-title {
-            font-size: 35px;
+            font-size: 36px;
             color: white;
             margin-bottom: 20px;
         }
@@ -133,7 +151,10 @@
             font-size: 18px;
         }
 
-        /* HABILIDADES */
+
+        /* =========================
+           HABILIDADES
+        ========================== */
 
         .skills {
             display: flex;
@@ -150,7 +171,10 @@
             color: #cbd5e1;
         }
 
-        /* PROYECTOS */
+
+        /* =========================
+           PROYECTOS
+        ========================== */
 
         #projects {
             background-color: #111827;
@@ -158,17 +182,18 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
-            margin-top: 40px;
+            margin-top: 45px;
         }
+
 
         .project-card {
             background-color: #0b1120;
             border: 1px solid #1f2937;
-            border-radius: 12px;
+            border-radius: 14px;
             overflow: hidden;
-            transition: transform 0.2s;
+            transition: 0.25s;
         }
 
         .project-card:hover {
@@ -176,29 +201,32 @@
             border-color: #38bdf8;
         }
 
+
         .project-image {
             height: 180px;
             background: linear-gradient(135deg, #172554, #0f766e);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 50px;
+            font-size: 55px;
         }
 
+
         .project-content {
-            padding: 25px;
+            padding: 28px;
         }
 
         .project-content h3 {
             color: white;
-            font-size: 22px;
+            font-size: 23px;
             margin-bottom: 12px;
         }
 
         .project-content p {
             color: #94a3b8;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
+
 
         .project-link {
             color: #38bdf8;
@@ -206,18 +234,29 @@
             font-weight: bold;
         }
 
-        /* CONTACTO */
+        .project-link:hover {
+            color: white;
+        }
+
+
+        /* =========================
+           CONTACTO
+        ========================== */
 
         #contact {
             text-align: center;
         }
 
-        #contact p {
+        .contact-description {
             color: #94a3b8;
-            margin: 20px 0 30px;
+            margin: 20px auto 30px;
+            max-width: 600px;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================== */
 
         footer {
             text-align: center;
@@ -226,7 +265,10 @@
             color: #64748b;
         }
 
-        /* MÓVIL */
+
+        /* =========================
+           MÓVIL
+        ========================== */
 
         @media (max-width: 900px) {
 
@@ -252,16 +294,21 @@
                 padding-left: 7%;
                 padding-right: 7%;
             }
+
         }
 
     </style>
+
 </head>
 
+
 <body>
+
 
     <!-- NAVEGACIÓN -->
 
     <nav>
+
         <div class="logo">MA.</div>
 
         <div>
@@ -269,7 +316,9 @@
             <a href="#projects">Proyectos</a>
             <a href="#contact">Contacto</a>
         </div>
+
     </nav>
+
 
 
     <!-- PORTADA -->
@@ -278,7 +327,9 @@
 
         <div class="hero-content">
 
-            <div class="tag">DATA ANALYTICS PORTFOLIO</div>
+            <div class="tag">
+                DATA ANALYTICS PORTFOLIO
+            </div>
 
             <h1>Miguel Aguirre</h1>
 
@@ -286,16 +337,20 @@
 
             <p>
                 Transformo datos complejos en información clara y útil
-                para apoyar la toma de decisiones mediante análisis de datos,
-                Power BI y visualización.
+                para apoyar la toma de decisiones mediante análisis,
+                visualización de datos y Power BI.
             </p>
 
             <a href="#projects" class="button">
                 Ver proyectos ↓
             </a>
 
-            <a href="#contact" class="button-secondary">
-                Contacto
+            <a href="https://www.linkedin.com/in/miguel-aguirre-i"
+               target="_blank"
+               class="button-secondary">
+
+                LinkedIn ↗
+
             </a>
 
         </div>
@@ -303,26 +358,37 @@
     </section>
 
 
+
     <!-- SOBRE MÍ -->
 
     <section id="about">
 
-        <h2 class="section-title">Sobre mí</h2>
+        <h2 class="section-title">
+            Sobre mí
+        </h2>
 
         <p class="section-description">
+
             Profesional orientado al análisis y visualización de datos.
-            Me especializo en transformar información en dashboards,
-            indicadores y análisis que faciliten la comprensión y la toma
-            de decisiones.
+            Desarrollo soluciones que permiten transformar grandes volúmenes
+            de información en indicadores, dashboards e insights para facilitar
+            la toma de decisiones.
+
         </p>
+
 
         <div class="skills">
 
             <div class="skill">📊 Power BI</div>
+
             <div class="skill">⚙️ Power Query</div>
+
             <div class="skill">🧮 DAX</div>
+
             <div class="skill">🗄️ SQL</div>
+
             <div class="skill">📈 Data Analysis</div>
+
             <div class="skill">🏗️ Data Modeling</div>
 
         </div>
@@ -330,16 +396,22 @@
     </section>
 
 
+
     <!-- PROYECTOS -->
 
     <section id="projects">
 
-        <h2 class="section-title">Proyectos destacados</h2>
+        <h2 class="section-title">
+            Proyectos destacados
+        </h2>
 
         <p class="section-description">
-            Una selección de proyectos enfocados en análisis,
-            transformación y visualización de datos.
+
+            Dashboards desarrollados en Power BI para el seguimiento,
+            análisis y visualización de indicadores operativos.
+
         </p>
+
 
 
         <div class="projects-grid">
@@ -349,43 +421,58 @@
 
             <div class="project-card">
 
-                <div class="project-image">📊</div>
+                <div class="project-image">
+                    🎫
+                </div>
 
                 <div class="project-content">
 
-                    <h3>Análisis de Ventas</h3>
+                    <h3>Control de Tickets</h3>
 
                     <p>
-                        Dashboard interactivo para analizar ventas,
-                        productos, clientes y tendencias comerciales.
+                        Dashboard para el seguimiento y análisis de tickets,
+                        facilitando la visualización de indicadores y el control
+                        de la operación.
                     </p>
 
-                    <a href="#" class="project-link">
-                        Ver proyecto →
+                    <a href="https://app.powerbi.com/reportEmbed?reportId=9a6af83b-ffca-47fd-b0f8-d880d769ca78&autoAuth=true&ctid=4ab9b2b8-2d76-4c3a-a3a2-b15ab9b5de4a"
+                       target="_blank"
+                       class="project-link">
+
+                        Ver dashboard →
+
                     </a>
 
                 </div>
 
             </div>
+
 
 
             <!-- PROYECTO 2 -->
 
             <div class="project-card">
 
-                <div class="project-image">📈</div>
+                <div class="project-image">
+                    ⚠️
+                </div>
 
                 <div class="project-content">
 
-                    <h3>Análisis Financiero</h3>
+                    <h3>Control Mensual de Incidencias</h3>
 
                     <p>
-                        Análisis de indicadores financieros,
-                        rendimiento y evolución de resultados.
+                        Dashboard orientado al monitoreo mensual de incidencias
+                        y al análisis de indicadores para identificar tendencias
+                        y oportunidades de mejora.
                     </p>
 
-                    <a href="#" class="project-link">
-                        Ver proyecto →
+                    <a href="https://app.powerbi.com/reportEmbed?reportId=fa634be5-a4ff-4ba4-b871-ac48a03d6d00&autoAuth=true&ctid=4ab9b2b8-2d76-4c3a-a3a2-b15ab9b5de4a"
+                       target="_blank"
+                       class="project-link">
+
+                        Ver dashboard →
+
                     </a>
 
                 </div>
@@ -393,23 +480,62 @@
             </div>
 
 
+
             <!-- PROYECTO 3 -->
 
             <div class="project-card">
 
-                <div class="project-image">⚙️</div>
+                <div class="project-image">
+                    🔧
+                </div>
 
                 <div class="project-content">
 
-                    <h3>Optimización de Datos</h3>
+                    <h3>Resultado Técnico Mensual</h3>
 
                     <p>
-                        Proyecto enfocado en transformación y optimización
-                        de grandes volúmenes de datos utilizando Power Query.
+                        Reporte para el seguimiento de resultados técnicos
+                        mensuales mediante indicadores y visualizaciones
+                        orientadas al análisis del desempeño.
                     </p>
 
-                    <a href="#" class="project-link">
-                        Ver proyecto →
+                    <a href="https://app.powerbi.com/reportEmbed?reportId=4c58758b-b6f5-4b29-9c9f-87af04a65af3&autoAuth=true&ctid=4ab9b2b8-2d76-4c3a-a3a2-b15ab9b5de4a"
+                       target="_blank"
+                       class="project-link">
+
+                        Ver dashboard →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROYECTO 4 -->
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    📦
+                </div>
+
+                <div class="project-content">
+
+                    <h3>Informe por Productos</h3>
+
+                    <p>
+                        Dashboard para el análisis de información por productos,
+                        permitiendo visualizar indicadores y comparar resultados.
+                    </p>
+
+                    <a href="https://app.powerbi.com/reportEmbed?reportId=8f262065-f1ca-43c2-927d-8d246f5a409e&autoAuth=true&ctid=4ab9b2b8-2d76-4c3a-a3a2-b15ab9b5de4a"
+                       target="_blank"
+                       class="project-link">
+
+                        Ver dashboard →
+
                     </a>
 
                 </div>
@@ -422,28 +548,40 @@
     </section>
 
 
+
     <!-- CONTACTO -->
 
     <section id="contact">
 
-        <h2 class="section-title">Contacto</h2>
+        <h2 class="section-title">
+            Contacto
+        </h2>
 
-        <p>
-            ¿Quieres conocer más sobre mi trabajo y mis proyectos?
+        <p class="contact-description">
+            Puedes conocer más sobre mi experiencia profesional en LinkedIn.
         </p>
 
-        <a href="https://www.linkedin.com/" class="button">
-            LinkedIn
+        <a href="https://www.linkedin.com/in/miguel-aguirre-i"
+           target="_blank"
+           class="button">
+
+            Visitar LinkedIn ↗
+
         </a>
 
     </section>
 
 
+
     <!-- FOOTER -->
 
     <footer>
+
         © 2026 Miguel Aguirre · Data Analyst
+
     </footer>
 
+
 </body>
+
 </html>
