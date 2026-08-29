@@ -1,578 +1,597 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Miguel Aguirre | Data Analyst</title>
+```
+<title>Miguel Aguirre | Data Analyst</title>
 
-    <style>
+<style>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0b1120;
-            color: #e5e7eb;
-            line-height: 1.6;
-        }
-
-
-        /* =========================
-           NAVEGACIÓN
-        ========================== */
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 22px 10%;
-            background-color: #0b1120;
-            border-bottom: 1px solid #1f2937;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: white;
-        }
-
-        nav a {
-            color: #9ca3af;
-            text-decoration: none;
-            margin-left: 25px;
-        }
-
-        nav a:hover {
-            color: #38bdf8;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #0b1120;
+        color: #e5e7eb;
+        line-height: 1.6;
+    }
 
 
-        /* =========================
-           PORTADA
-        ========================== */
+    /* =========================
+       NAVEGACIÓN
+    ========================== */
 
-        .hero {
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            padding: 80px 10%;
-        }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 10%;
+        background-color: #0b1120;
+        border-bottom: 1px solid #1f2937;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
 
-        .hero-content {
-            max-width: 850px;
-        }
+    .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: white;
+    }
 
-        .tag {
-            color: #38bdf8;
-            font-weight: bold;
-            letter-spacing: 2px;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
+    nav a {
+        color: #9ca3af;
+        text-decoration: none;
+        margin-left: 25px;
+    }
+
+    nav a:hover {
+        color: #38bdf8;
+    }
+
+
+    /* =========================
+       PORTADA
+    ========================== */
+
+    .hero {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        padding: 80px 10%;
+    }
+
+    .hero-content {
+        max-width: 850px;
+    }
+
+    .tag {
+        color: #38bdf8;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 65px;
+        line-height: 1.1;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+        color: #9ca3af;
+        font-weight: normal;
+        margin-bottom: 25px;
+    }
+
+    .hero p {
+        font-size: 19px;
+        color: #cbd5e1;
+        max-width: 680px;
+        margin-bottom: 35px;
+    }
+
+
+    .button {
+        display: inline-block;
+        background-color: #38bdf8;
+        color: #0b1120;
+        padding: 14px 25px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        margin-right: 15px;
+        transition: 0.2s;
+    }
+
+    .button:hover {
+        transform: translateY(-2px);
+    }
+
+
+    .button-secondary {
+        display: inline-block;
+        border: 1px solid #334155;
+        color: white;
+        padding: 13px 25px;
+        text-decoration: none;
+        border-radius: 8px;
+    }
+
+
+    /* =========================
+       SECCIONES
+    ========================== */
+
+    section {
+        padding: 90px 10%;
+    }
+
+    .section-title {
+        font-size: 36px;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .section-description {
+        color: #94a3b8;
+        max-width: 750px;
+        font-size: 18px;
+    }
+
+
+    /* =========================
+       HABILIDADES
+    ========================== */
+
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 35px;
+    }
+
+    .skill {
+        background-color: #111827;
+        border: 1px solid #1f2937;
+        padding: 12px 20px;
+        border-radius: 8px;
+        color: #cbd5e1;
+    }
+
+
+    /* =========================
+       PROYECTOS
+    ========================== */
+
+    #projects {
+        background-color: #111827;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-top: 45px;
+    }
+
+
+    .project-card {
+        background-color: #0b1120;
+        border: 1px solid #1f2937;
+        border-radius: 14px;
+        overflow: hidden;
+        transition: 0.25s;
+    }
+
+    .project-card:hover {
+        transform: translateY(-8px);
+        border-color: #38bdf8;
+    }
+
+
+    .project-image {
+        height: 180px;
+        background: linear-gradient(135deg, #172554, #0f766e);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 55px;
+    }
+
+
+    .project-content {
+        padding: 28px;
+    }
+
+    .project-content h3 {
+        color: white;
+        font-size: 23px;
+        margin-bottom: 12px;
+    }
+
+    .project-content p {
+        color: #94a3b8;
+        margin-bottom: 22px;
+    }
+
+
+    .project-link {
+        color: #38bdf8;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .project-link:hover {
+        color: white;
+    }
+
+
+    /* =========================
+       CONTACTO
+    ========================== */
+
+    #contact {
+        text-align: center;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        border-top: 1px solid #1f2937;
+        color: #64748b;
+    }
+
+
+    /* =========================
+       MÓVIL
+    ========================== */
+
+    @media (max-width: 900px) {
 
         h1 {
-            font-size: 65px;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            color: white;
-        }
-
-        .hero h2 {
-            font-size: 25px;
-            color: #9ca3af;
-            font-weight: normal;
-            margin-bottom: 25px;
-        }
-
-        .hero p {
-            font-size: 19px;
-            color: #cbd5e1;
-            max-width: 680px;
-            margin-bottom: 35px;
-        }
-
-
-        .button {
-            display: inline-block;
-            background-color: #38bdf8;
-            color: #0b1120;
-            padding: 14px 25px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            margin-right: 15px;
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
-        }
-
-
-        .button-secondary {
-            display: inline-block;
-            border: 1px solid #334155;
-            color: white;
-            padding: 13px 25px;
-            text-decoration: none;
-            border-radius: 8px;
-        }
-
-
-        /* =========================
-           SECCIONES
-        ========================== */
-
-        section {
-            padding: 90px 10%;
-        }
-
-        .section-title {
-            font-size: 36px;
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        .section-description {
-            color: #94a3b8;
-            max-width: 750px;
-            font-size: 18px;
-        }
-
-
-        /* =========================
-           HABILIDADES
-        ========================== */
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 35px;
-        }
-
-        .skill {
-            background-color: #111827;
-            border: 1px solid #1f2937;
-            padding: 12px 20px;
-            border-radius: 8px;
-            color: #cbd5e1;
-        }
-
-
-        /* =========================
-           PROYECTOS
-        ========================== */
-
-        #projects {
-            background-color: #111827;
+            font-size: 45px;
         }
 
         .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            margin-top: 45px;
+            grid-template-columns: 1fr;
         }
 
-
-        .project-card {
-            background-color: #0b1120;
-            border: 1px solid #1f2937;
-            border-radius: 14px;
-            overflow: hidden;
-            transition: 0.25s;
+        nav {
+            padding: 20px 7%;
         }
 
-        .project-card:hover {
-            transform: translateY(-8px);
-            border-color: #38bdf8;
+        nav a {
+            margin-left: 12px;
+            font-size: 14px;
         }
 
-
-        .project-image {
-            height: 180px;
-            background: linear-gradient(135deg, #172554, #0f766e);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 55px;
+        section,
+        .hero {
+            padding-left: 7%;
+            padding-right: 7%;
         }
 
+    }
 
-        .project-content {
-            padding: 28px;
-        }
-
-        .project-content h3 {
-            color: white;
-            font-size: 23px;
-            margin-bottom: 12px;
-        }
-
-        .project-content p {
-            color: #94a3b8;
-            margin-bottom: 22px;
-        }
-
-
-        .project-link {
-            color: #38bdf8;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .project-link:hover {
-            color: white;
-        }
-
-
-        /* =========================
-           CONTACTO
-        ========================== */
-
-        #contact {
-            text-align: center;
-        }
-
-        .contact-description {
-            color: #94a3b8;
-            margin: 20px auto 30px;
-            max-width: 600px;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================== */
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            border-top: 1px solid #1f2937;
-            color: #64748b;
-        }
-
-
-        /* =========================
-           MÓVIL
-        ========================== */
-
-        @media (max-width: 900px) {
-
-            h1 {
-                font-size: 45px;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            nav {
-                padding: 20px 7%;
-            }
-
-            nav a {
-                margin-left: 12px;
-                font-size: 14px;
-            }
-
-            section,
-            .hero {
-                padding-left: 7%;
-                padding-right: 7%;
-            }
-
-        }
-
-    </style>
+</style>
+```
 
 </head>
 
-
 <body>
 
+```
+<!-- =========================
+     NAVEGACIÓN
+========================== -->
 
-    <!-- NAVEGACIÓN -->
+<nav>
 
-    <nav>
+    <div class="logo">MA.</div>
 
-        <div class="logo">MA.</div>
+    <div>
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+    </div>
 
-        <div>
-            <a href="#about">Sobre mí</a>
-            <a href="#projects">Proyectos</a>
-            <a href="#contact">Contacto</a>
+</nav>
+
+
+
+<!-- =========================
+     PORTADA
+========================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="tag">
+            DATA ANALYTICS PORTFOLIO
         </div>
 
-    </nav>
+        <h1>Miguel Aguirre</h1>
 
+        <h2>Data Analyst</h2>
 
-
-    <!-- PORTADA -->
-
-    <section class="hero">
-
-        <div class="hero-content">
-
-            <div class="tag">
-                DATA ANALYTICS PORTFOLIO
-            </div>
-
-            <h1>Miguel Aguirre</h1>
-
-            <h2>Data Analyst</h2>
-
-            <p>
-                Transformo datos complejos en información clara y útil
-                para apoyar la toma de decisiones mediante análisis,
-                visualización de datos y Power BI.
-            </p>
-
-            <a href="#projects" class="button">
-                Ver proyectos ↓
-            </a>
-
-            <a href="https://www.linkedin.com/in/miguel-aguirre-i"
-               target="_blank"
-               class="button-secondary">
-
-                LinkedIn ↗
-
-            </a>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- SOBRE MÍ -->
-
-    <section id="about">
-
-        <h2 class="section-title">
-            Sobre mí
-        </h2>
-
-        <p class="section-description">
-
-            Profesional orientado al análisis y visualización de datos.
-            Desarrollo soluciones que permiten transformar grandes volúmenes
-            de información en indicadores, dashboards e insights para facilitar
-            la toma de decisiones.
-
+        <p>
+            Transformo datos complejos en información clara y útil
+            para apoyar la toma de decisiones mediante análisis,
+            visualización de datos y Power BI.
         </p>
 
-
-        <div class="skills">
-
-            <div class="skill">📊 Power BI</div>
-
-            <div class="skill">⚙️ Power Query</div>
-
-            <div class="skill">🧮 DAX</div>
-
-            <div class="skill">🗄️ SQL</div>
-
-            <div class="skill">📈 Data Analysis</div>
-
-            <div class="skill">🏗️ Data Modeling</div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- PROYECTOS -->
-
-    <section id="projects">
-
-        <h2 class="section-title">
-            Proyectos destacados
-        </h2>
-
-        <p class="section-description">
-
-            Dashboards desarrollados en Power BI para el seguimiento,
-            análisis y visualización de indicadores operativos.
-
-        </p>
-
-
-
-        <div class="projects-grid">
-
-
-            <!-- PROYECTO 1 -->
-
-            <div class="project-card">
-
-                <div class="project-image">
-                    🎫
-                </div>
-
-                <div class="project-content">
-
-                    <h3>Control de Tickets</h3>
-
-                    <p>
-                        Dashboard para el seguimiento y análisis de tickets,
-                        facilitando la visualización de indicadores y el control
-                        de la operación.
-                    </p>
-
-                    <a href="https://app.powerbi.com/view?r=eyJrIjoiZmJkNzI4YzAtNWYwYy00ZDU4LTkwMGMtZTk1OTBkZDlhZWI2IiwidCI6IjRhYjliMmI4LTJkNzYtNGMzYS1hM2EyLWIxNWFiOWI1ZGU0YSIsImMiOjR9">
-
-                        Ver dashboard →
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- PROYECTO 2 -->
-
-            <div class="project-card">
-
-                <div class="project-image">
-                    ⚠️
-                </div>
-
-                <div class="project-content">
-
-                    <h3>Control Mensual de Incidencias</h3>
-
-                    <p>
-                        Dashboard orientado al monitoreo mensual de incidencias
-                        y al análisis de indicadores para identificar tendencias
-                        y oportunidades de mejora.
-                    </p>
-
-                    <a href="https://app.powerbi.com/view?r=eyJrIjoiYmRlODk5MTYtOTQ5YS00OGVlLWI2MGEtZGViNmM4ZDQwODI5IiwidCI6IjRhYjliMmI4LTJkNzYtNGMzYS1hM2EyLWIxNWFiOWI1ZGU0YSIsImMiOjR9">
-
-                        Ver dashboard →
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- PROYECTO 3 -->
-
-            <div class="project-card">
-
-                <div class="project-image">
-                    🔧
-                </div>
-
-                <div class="project-content">
-
-                    <h3>Resultado Técnico Mensual</h3>
-
-                    <p>
-                        Reporte para el seguimiento de resultados técnicos
-                        mensuales mediante indicadores y visualizaciones
-                        orientadas al análisis del desempeño.
-                    </p>
-
-                    <a href="https://app.powerbi.com/view?r=eyJrIjoiMjZiYjg4NzEtNmRhMS00N2VhLTgyMzAtOTc2OWRjYzQ5ODVjIiwidCI6IjRhYjliMmI4LTJkNzYtNGMzYS1hM2EyLWIxNWFiOWI1ZGU0YSIsImMiOjR9">
-
-                        Ver dashboard →
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- PROYECTO 4 -->
-
-            <div class="project-card">
-
-                <div class="project-image">
-                    📦
-                </div>
-
-                <div class="project-content">
-
-                    <h3>Informe por Productos</h3>
-
-                    <p>
-                        Dashboard para el análisis de información por productos,
-                        permitiendo visualizar indicadores y comparar resultados.
-                    </p>
-
-                    <a href="https://app.powerbi.com/view?r=eyJrIjoiNTE1ZDQxMGMtZDVmOC00N2E1LWFmZGYtZTJlODMyNmZiZjVmIiwidCI6IjRhYjliMmI4LTJkNzYtNGMzYS1hM2EyLWIxNWFiOWI1ZGU0YSIsImMiOjR9">
-
-                        Ver dashboard →
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- CONTACTO -->
-
-    <section id="contact">
-
-        <h2 class="section-title">
-            Contacto
-        </h2>
-
-        <p class="contact-description">
-            Puedes conocer más sobre mi experiencia profesional en LinkedIn.
-        </p>
+        <a href="#projects" class="button">
+            Ver proyectos ↓
+        </a>
 
         <a href="https://www.linkedin.com/in/miguel-aguirre-i"
            target="_blank"
-           class="button">
+           rel="noopener noreferrer"
+           class="button-secondary">
 
-            Visitar LinkedIn ↗
+            LinkedIn ↗
 
         </a>
 
-    </section>
+    </div>
+
+</section>
 
 
 
-    <!-- FOOTER -->
+<!-- =========================
+     SOBRE MÍ
+========================== -->
 
-    <footer>
+<section id="about">
 
-        © 2026 Miguel Aguirre · Data Analyst
+    <h2 class="section-title">
+        Sobre mí
+    </h2>
 
-    </footer>
+    <p class="section-description">
 
+        Profesional orientado al análisis y visualización de datos.
+        Desarrollo soluciones que permiten transformar grandes volúmenes
+        de información en indicadores, dashboards e insights para facilitar
+        la toma de decisiones.
+
+    </p>
+
+
+    <div class="skills">
+
+        <div class="skill">📊 Power BI</div>
+
+        <div class="skill">⚙️ Power Query</div>
+
+        <div class="skill">🧮 DAX</div>
+
+        <div class="skill">🗄️ SQL</div>
+
+        <div class="skill">📈 Data Analysis</div>
+
+        <div class="skill">🏗️ Data Modeling</div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROYECTOS
+========================== -->
+
+<section id="projects">
+
+    <h2 class="section-title">
+        Proyectos destacados
+    </h2>
+
+    <p class="section-description">
+
+        Dashboards desarrollados en Power BI para el seguimiento,
+        análisis y visualización de indicadores operativos.
+
+    </p>
+
+
+
+    <div class="projects-grid">
+
+
+        <!-- PROYECTO 1 -->
+
+        <div class="project-card">
+
+            <div class="project-image">
+                🎫
+            </div>
+
+            <div class="project-content">
+
+                <h3>Control de Tickets</h3>
+
+                <p>
+                    Dashboard para el seguimiento y análisis de tickets,
+                    facilitando la visualización de indicadores y el control
+                    de la operación.
+                </p>
+
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiZmJkNzI4YzAtNWYwYy00ZDU4LTkwMGMtZTk1OTBkZDlhZWI2IiwidCI6IjRhYjliMmI4LTJkNzYtNGMzYS1hM2EyLWIxNWFiOWI1ZGU0YSIsImMiOjR9"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="project-link">
+
+                    Ver dashboard →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROYECTO 2 -->
+
+        <div class="project-card">
+
+            <div class="project-image">
+                ⚠️
+            </div>
+
+            <div class="project-content">
+
+                <h3>Control Mensual de Incidencias</h3>
+
+                <p>
+                    Dashboard orientado al monitoreo mensual de incidencias
+                    y al análisis de indicadores para identificar tendencias
+                    y oportunidades de mejora.
+                </p>
+
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiYmRlODk5MTYtOTQ5YS00OGVlLWI2MGEtZGViNmM4ZDQwODI5IiwidCI6IjRhYjliMmI4LTJkNzYtNGMzYS1hM2EyLWIxNWFiOWI1ZGU0YSIsImMiOjR9"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="project-link">
+
+                    Ver dashboard →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROYECTO 3 -->
+
+        <div class="project-card">
+
+            <div class="project-image">
+                🔧
+            </div>
+
+            <div class="project-content">
+
+                <h3>Resultado Técnico Mensual</h3>
+
+                <p>
+                    Reporte para el seguimiento de resultados técnicos
+                    mensuales mediante indicadores y visualizaciones
+                    orientadas al análisis del desempeño.
+                </p>
+
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiMjZiYjg4NzEtNmRhMS00N2VhLTgyMzAtOTc2OWRjYzQ5ODVjIiwidCI6IjRhYjliMmI4LTJkNzYtNGMzYS1hM2EyLWIxNWFiOWI1ZGU0YSIsImMiOjR9"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="project-link">
+
+                    Ver dashboard →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROYECTO 4 -->
+
+        <div class="project-card">
+
+            <div class="project-image">
+                📦
+            </div>
+
+            <div class="project-content">
+
+                <h3>Informe por Productos</h3>
+
+                <p>
+                    Dashboard para el análisis de información por productos,
+                    permitiendo visualizar indicadores y comparar resultados.
+                </p>
+
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiNTE1ZDQxMGMtZDVmOC00N2E1LWFmZGYtZTJlODMyNmZiZjVmIiwidCI6IjRhYjliMmI4LTJkNzYtNGMzYS1hM2EyLWIxNWFiOWI1ZGU0YSIsImMiOjR9"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="project-link">
+
+                    Ver dashboard →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACTO
+========================== -->
+
+<section id="contact">
+
+    <h2 class="section-title">
+        Contacto
+    </h2>
+
+    <a href="https://www.linkedin.com/in/miguel-aguirre-i"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="button">
+
+        Visitar LinkedIn ↗
+
+    </a>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    © 2026 Miguel Aguirre · Data Analyst
+
+</footer>
+```
 
 </body>
 
