@@ -3,62 +3,447 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio | Power BI</title>
+
+    <title>Miguel Aguirre | Data Analyst</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b1120;
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
+
+        /* NAVEGACIÓN */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 10%;
+            background-color: #0b1120;
+            border-bottom: 1px solid #1f2937;
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        nav a {
+            color: #9ca3af;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* PORTADA */
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 10%;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .tag {
+            color: #38bdf8;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 65px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            color: #9ca3af;
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #cbd5e1;
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #38bdf8;
+            color: #0b1120;
+            padding: 14px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .button-secondary {
+            display: inline-block;
+            border: 1px solid #334155;
+            color: white;
+            padding: 13px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        /* SECCIONES */
+
+        section {
+            padding: 90px 10%;
+        }
+
+        .section-title {
+            font-size: 35px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            color: #94a3b8;
+            max-width: 750px;
+            font-size: 18px;
+        }
+
+        /* HABILIDADES */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .skill {
+            background-color: #111827;
+            border: 1px solid #1f2937;
+            padding: 12px 20px;
+            border-radius: 8px;
+            color: #cbd5e1;
+        }
+
+        /* PROYECTOS */
+
+        #projects {
+            background-color: #111827;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background-color: #0b1120;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
+        }
+
+        .project-image {
+            height: 180px;
+            background: linear-gradient(135deg, #172554, #0f766e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .project-content p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* CONTACTO */
+
+        #contact {
+            text-align: center;
+        }
+
+        #contact p {
+            color: #94a3b8;
+            margin: 20px 0 30px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #1f2937;
+            color: #64748b;
+        }
+
+        /* MÓVIL */
+
+        @media (max-width: 900px) {
+
+            h1 {
+                font-size: 45px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                padding: 20px 7%;
+            }
+
+            nav a {
+                margin-left: 12px;
+                font-size: 14px;
+            }
+
+            section,
+            .hero {
+                padding-left: 7%;
+                padding-right: 7%;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
-    <h1>Miguel A.</h1>
+    <!-- NAVEGACIÓN -->
 
-    <h2>Data Analyst | Power BI</h2>
+    <nav>
+        <div class="logo">MA.</div>
 
-    <p>
-        Bienvenido a mi portafolio profesional.
-        Aquí podrás conocer algunos de mis proyectos y habilidades
-        en análisis de datos y Power BI.
-    </p>
+        <div>
+            <a href="#about">Sobre mí</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#contact">Contacto</a>
+        </div>
+    </nav>
 
-    <hr>
 
-    <h2>Mis habilidades</h2>
+    <!-- PORTADA -->
 
-    <ul>
-        <li>Power BI</li>
-        <li>Power Query</li>
-        <li>DAX</li>
-        <li>SQL</li>
-        <li>Modelado de datos</li>
-    </ul>
+    <section class="hero">
 
-    <hr>
+        <div class="hero-content">
 
-    <h2>Mis proyectos</h2>
+            <div class="tag">DATA ANALYTICS PORTFOLIO</div>
 
-    <h3>📊 Proyecto 1: Análisis de Ventas</h3>
+            <h1>Miguel Aguirre</h1>
 
-    <p>
-        Dashboard para analizar ventas, productos y tendencias comerciales.
-    </p>
+            <h2>Data Analyst</h2>
 
-    <h3>📈 Proyecto 2: Análisis de Datos</h3>
+            <p>
+                Transformo datos complejos en información clara y útil
+                para apoyar la toma de decisiones mediante análisis de datos,
+                Power BI y visualización.
+            </p>
 
-    <p>
-        Proyecto desarrollado utilizando Power BI, Power Query y DAX.
-    </p>
+            <a href="#projects" class="button">
+                Ver proyectos ↓
+            </a>
 
-    <h3>⚙️ Proyecto 3: Optimización de Datos</h3>
+            <a href="#contact" class="button-secondary">
+                Contacto
+            </a>
 
-    <p>
-        Proyecto enfocado en la optimización y transformación de grandes volúmenes de información.
-    </p>
+        </div>
 
-    <hr>
+    </section>
 
-    <h2>Contacto</h2>
 
-    <p>
-        Gracias por visitar mi portafolio.
-    </p>
+    <!-- SOBRE MÍ -->
+
+    <section id="about">
+
+        <h2 class="section-title">Sobre mí</h2>
+
+        <p class="section-description">
+            Profesional orientado al análisis y visualización de datos.
+            Me especializo en transformar información en dashboards,
+            indicadores y análisis que faciliten la comprensión y la toma
+            de decisiones.
+        </p>
+
+        <div class="skills">
+
+            <div class="skill">📊 Power BI</div>
+            <div class="skill">⚙️ Power Query</div>
+            <div class="skill">🧮 DAX</div>
+            <div class="skill">🗄️ SQL</div>
+            <div class="skill">📈 Data Analysis</div>
+            <div class="skill">🏗️ Data Modeling</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROYECTOS -->
+
+    <section id="projects">
+
+        <h2 class="section-title">Proyectos destacados</h2>
+
+        <p class="section-description">
+            Una selección de proyectos enfocados en análisis,
+            transformación y visualización de datos.
+        </p>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROYECTO 1 -->
+
+            <div class="project-card">
+
+                <div class="project-image">📊</div>
+
+                <div class="project-content">
+
+                    <h3>Análisis de Ventas</h3>
+
+                    <p>
+                        Dashboard interactivo para analizar ventas,
+                        productos, clientes y tendencias comerciales.
+                    </p>
+
+                    <a href="#" class="project-link">
+                        Ver proyecto →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROYECTO 2 -->
+
+            <div class="project-card">
+
+                <div class="project-image">📈</div>
+
+                <div class="project-content">
+
+                    <h3>Análisis Financiero</h3>
+
+                    <p>
+                        Análisis de indicadores financieros,
+                        rendimiento y evolución de resultados.
+                    </p>
+
+                    <a href="#" class="project-link">
+                        Ver proyecto →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROYECTO 3 -->
+
+            <div class="project-card">
+
+                <div class="project-image">⚙️</div>
+
+                <div class="project-content">
+
+                    <h3>Optimización de Datos</h3>
+
+                    <p>
+                        Proyecto enfocado en transformación y optimización
+                        de grandes volúmenes de datos utilizando Power Query.
+                    </p>
+
+                    <a href="#" class="project-link">
+                        Ver proyecto →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+
+    <section id="contact">
+
+        <h2 class="section-title">Contacto</h2>
+
+        <p>
+            ¿Quieres conocer más sobre mi trabajo y mis proyectos?
+        </p>
+
+        <a href="https://www.linkedin.com/" class="button">
+            LinkedIn
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        © 2026 Miguel Aguirre · Data Analyst
+    </footer>
 
 </body>
 </html>
